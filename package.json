@@ -1,0 +1,16 @@
+{
+  "name": "fibonnaccisequence",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha ||true"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "eslint": "^7.27.0",
+    "mocha": "^8.4.0"
+  }
+}
