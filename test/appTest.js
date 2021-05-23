@@ -2,7 +2,7 @@ const { assert } = require('chai');
 const getNthFibonacci = require('../app');
 
 describe('Fibonacci Sequence', () => {
-  it('Should return 0 for the Fibonacci Number equals 0', () =>{
+  it('Should return 0 for the Fibonacci Number equals 0', () => {
     assert.equal(getNthFibonacci(0), 0);
   });
   it('Should return 1 for the Fibonacci number equal 1', () => {
@@ -14,7 +14,11 @@ describe('Fibonacci Sequence', () => {
   it('should return 2 for the 3rd Fibonacci number', () => {
     assert.equal(getNthFibonacci(3), 2);
   });
-  it('should return 34 when Fibonacci number eqlas 9', () =>{
+  it('should return 34 when Fibonacci number eqlas 9', () => {
     assert.equal(getNthFibonacci(9), 34);
-  })
+  });
+  // Validating Fib numbers that are negative
+  it('should throw error for negative Fibonacci numbers', () => {
+    assert.throws(() => getNthFibonacci(-2), 'n cannot be negative')
+  });
 });
