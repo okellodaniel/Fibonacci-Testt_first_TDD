@@ -1,27 +1,33 @@
+// Chai dependency
 const { assert } = require('chai');
+
+// Import getNthFibonacci function.
 const getNthFibonacci = require('../app');
 
 describe('Fibonacci Sequence', () => {
-  describe('Valid Fibonacci number', () => {
-    it('Should return 0 for the Fibonacci Number equals 0', () => {
+  describe('valid Fibonacci number', () => {
+    it('getNthFibonacci(0) == 0', () => {
       assert.equal(getNthFibonacci(0), 0);
     });
-    it('Should return 1 for the Fibonacci number equal 1', () => {
+    it('getNthFibonacci(1) == 1', () => {
       assert.equal(getNthFibonacci(1), 1);
     });
-    it('should return 1 for the 2nd Fibonacci number', () => {
+    it('getNthFibonacci(2) == 1', () => {
       assert.equal(getNthFibonacci(2), 1);
     });
-    it('should return 2 for the 3rd Fibonacci number', () => {
+    it('getNthFibonacci(3) == 2', () => {
       assert.equal(getNthFibonacci(3), 2);
     });
-    it('should return 34 when Fibonacci number equals 9', () => {
+    it('getNthFibonacci(5) == 5', () => {
+      assert.equal(getNthFibonacci(5), 5);
+    });
+    it('getNthFibonacci(9) == 34', () => {
       assert.equal(getNthFibonacci(9), 34);
     });
   });
   describe('Invalid Fibonacci number', () => {
-    // Validating Fib numbers that are negative
-    it('should throw error for negative Fibonacci numbers', () => {
+  // Validating Fib numbers that are negative
+    it('getNthFibonacci(-45) == "n cannot be negative"', () => {
       assert.throws(() => getNthFibonacci(-45), 'n cannot be negative');
     });
   });
